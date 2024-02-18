@@ -1,5 +1,5 @@
 #(©)NKMDB
-
+import uvloop
 from pyrogram import Client
 from pyrogram.enums import ParseMode
 import sys
@@ -7,6 +7,7 @@ from datetime import datetime
 
 from config import API_HASH, APP_ID, LOGGER, TG_BOT_TOKEN, TG_BOT_WORKERS, CHANNEL_ID, PORT, FORCE_SUB_CHANNELS
 
+uvloop.install()
 
 class Bot(Client):
     def __init__(self):
